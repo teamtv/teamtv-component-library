@@ -1,6 +1,7 @@
 @import "teamtv/variables";
 @import "~bootstrap/scss/bootstrap";
 
+// bootstrap components
 @import "teamtv/badges";
 @import "teamtv/buttons";
 @import "teamtv/cards";
@@ -10,3 +11,6 @@
 @import "teamtv/nav";
 @import "teamtv/progress";
 @import "teamtv/type";
+
+// teamtv components
+@import "teamtv/overview";
