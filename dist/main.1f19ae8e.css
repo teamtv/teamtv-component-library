@@ -4423,6 +4423,13 @@ readers do not read off random characters that represent icons */
   font-weight: 900; }
 
 @charset "UTF-8";
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -14073,6 +14080,21 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.badge {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cccccc;
+  border-radius: 7px;
+  background-color: #cccccc;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -14156,6 +14178,186 @@ h3 {
 .btn-group-select .btn.active {
   background-color: #343a40;
   color: white;
+}
+
+.card {
+  margin-bottom: 36px;
+}
+.card .card {
+  background-color: #e9ecef;
+}
+
+.card-header {
+  background-color: #495057;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.card-header h1,
+.card-header h2,
+.card-header h3,
+.card-header h4,
+.card-header h5 {
+  margin: 0;
+}
+
+.panel {
+  margin: 0 0 18px;
+  padding: 18px;
+  border: 1px solid #adb5bd;
+  border-radius: 7px;
+}
+
+input[type=text].form-control {
+  border-color: #ced4da;
+}
+
+.form-inline .form-group > span {
+  margin: 0 12px 8px;
+}
+.form-inline .form-group > span:first-child {
+  margin-left: 0;
+}
+
+.form-group.is-invalid .custom-form-control {
+  border-color: #cf0f0f;
+}
+.form-group.is-invalid .custom-form-control > div {
+  border-color: #cf0f0f;
+}
+.form-group.is-invalid .invalid-feedback {
+  display: inline-block;
+}
+
+.text-value {
+  margin-bottom: 36px;
+  padding: 12px;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.fieldset-inline label {
+  display: inline;
+  margin-right: 18px;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+}
+
+.labels {
+  position: relative;
+  line-height: 44px;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px 0 0;
+  padding: 6px 10px;
+  border: 1px solid #757575;
+  border-radius: 7px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+  color: #424242;
+}
+.label:last-child {
+  margin-right: 0;
+}
+.label.active {
+  background-color: #495057;
+  color: white;
+}
+.label.active .badge {
+  border-color: white;
+  background-color: transparent;
+}
+.btn-group > .label {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.label-light, .label-secondary, .label-link {
+  border-color: transparent;
+}
+.label-light {
+  background-color: #f2f2f2;
+}
+.label-secondary {
+  background-color: #cccccc;
+}
+.label-link {
+  background-color: transparent;
+}
+.label .badge {
+  margin-left: 10px;
+}
+
+.labels-connected {
+  margin: 10px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .labels-connected .label .i {
+    display: none;
+  }
+}
+
+.label-connection {
+  height: 1px;
+  background-color: #495057;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.nav-link.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.nav-link.active {
+  font-weight: 700;
+}
+
+.progress {
+  margin-bottom: 36px;
+}
+
+* {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h5 {
+  color: #424242;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+ol {
+  margin: 12px 0;
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */

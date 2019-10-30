@@ -1,0 +1,46 @@
+@import './variables';
+
+// NOTE: this reverts styling applied to the text input element directly
+input[type='text'].form-control {
+  border-color: #ced4da;
+}
+
+.form-inline .form-group > span {
+  margin: 0 12px 8px; // bootstrap input bottom margin
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.form-group.is-invalid {
+  .custom-form-control {
+    border-color: $red;
+
+    & > div {
+      border-color: $red;
+    }
+  }
+  .invalid-feedback {
+    display: inline-block;
+  }
+}
+
+.text-value {
+  margin-bottom: $spacing-xl;
+  padding: $spacing-md;
+  border-radius: $border-radius-default;
+  background: $bg-lighter;
+}
+
+.fieldset-inline {
+  label {
+    display: inline;
+    margin-right: $spacing-lg;
+  }
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+}

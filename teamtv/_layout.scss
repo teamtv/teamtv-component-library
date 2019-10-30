@@ -1,0 +1,26 @@
+@import '~bootstrap/scss/mixins';
+@import './variables';
+
+@mixin vh100-media-up($size: sm) {
+  //$container-offset: 260px;
+
+  @include media-breakpoint-up($size) {
+    //height: calc(100vh - #{$container-offset});
+    height: 100vh;
+  }
+}
+
+/* A centered generic layout container based on bootstrap's grid variables */
+@mixin layout-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $content-margin; //($grid-gutter-width / 2); RON SAYS 5% :-)
+  padding-right: $content-margin; //($grid-gutter-width / 2);
+}
+
+#app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

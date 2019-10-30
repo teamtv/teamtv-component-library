@@ -1,0 +1,119 @@
+@import '~bootstrap/scss/mixins';
+@import 'lib/styles/variables.scss';
+@import 'lib/styles/badge.scss';
+
+$bg-color: #424242;
+
+.menu-panel {
+  width: 100vw;
+  padding: $spacing-lg;
+  background-color: $bg-color;
+  color: white;
+  z-index: 3;
+  font-weight: 300;
+
+  .disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  @include media-breakpoint-down(sm) {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    width: auto;
+    // right: $content-margin;
+    top: $spacing-default * 4;
+    border-radius: $border-radius-default;
+
+    .nav-primary,
+    .nav-secondary {
+      .nav-link {
+        padding: 0.5rem 2rem 0.5rem 0;
+      }
+    }
+
+    .nav-settings {
+      display: flex;
+
+      &-group {
+        margin-right: $spacing-md * 6;
+      }
+
+      .nav {
+        flex-direction: column;
+      }
+    }
+  }
+
+  a {
+    color: white;
+  }
+
+  h5 {
+    background-color: white;
+    color: $bg-color;
+    display: inline-block;
+    border-radius: $border-radius-default;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .nav {
+    position: relative;
+    margin-bottom: $spacing-xl;
+  }
+
+  .nav-primary,
+  .nav-settings,
+  .nav-secondary {
+    margin-left: $spacing-lg;
+    margin-right: $spacing-lg;
+  }
+  .nav-primary,
+  .nav-settings {
+    margin-bottom: $spacing-lg;
+  }
+
+  .nav-secondary {
+    margin-bottom: 0;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+  }
+
+  .nav-logout {
+    flex-grow: 1;
+    text-align: right;
+
+    .nav-link {
+      padding-right: 0;
+    }
+  }
+
+  .badge {
+    background-color: red;
+    border-color: transparent;
+    border-radius: $badge-size;
+    margin-left: $spacing-md;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .nav-item {
+      width: 100%;
+    }
+
+    .nav-logout {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

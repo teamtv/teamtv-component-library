@@ -1,0 +1,33 @@
+@import './variables';
+
+.card {
+  margin-bottom: $spacing-xl;
+
+  .card {
+    background-color: $gray-200;
+  }
+}
+
+.card-header {
+  background-color: $bg-dark;
+  color: $font-color-contrasting;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+  }
+}
+
+// TODO: move to own file
+.panel {
+  margin: 0 0 $spacing-lg;
+  padding: $spacing-lg;
+  border: 1px solid $gray-500;
+  border-radius: $border-radius-default;
+}

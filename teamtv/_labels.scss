@@ -1,0 +1,99 @@
+@import './variables';
+
+$label-spacing-lg: 20px;
+$label-spacing-md: 10px;
+$label-spacing-sm: 6px;
+$label-font-size-md: 16px;
+$label-font-size-sm: 14px;
+$label-line-height: 22px;
+
+.labels {
+  position: relative;
+  line-height: $label-line-height * 2;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 $label-spacing-md 0 0;
+  padding: $label-spacing-sm $label-spacing-md;
+  border: 1px solid $font-color-light;
+  border-radius: $border-radius-default;
+  background-color: $bg-lighter;
+  font-size: $label-font-size-md;
+  font-weight: normal;
+  line-height: $label-line-height;
+  color: $font-color-default;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.active {
+    background-color: $bg-dark;
+    color: $font-color-contrasting;
+
+    .badge {
+      border-color: $font-color-contrasting;
+      background-color: transparent;
+    }
+  }
+
+  .btn-group > & {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  // Naming is taken from bootstrap buttons:
+  // https://getbootstrap.com/docs/4.1/components/buttons/
+  // NOTE: border removal is explicit because labels and buttons designs are
+  // mixed up. For now some buttons are rendered as labels.
+  // TODO: remove this once buttons and labels are no longer mixed up.
+  &-light,
+  &-secondary,
+  &-link {
+    border-color: transparent;
+  }
+
+  &-light {
+    background-color: $bg-light;
+  }
+
+  &-secondary {
+    background-color: $bg-normal;
+  }
+
+  &-link {
+    background-color: transparent;
+  }
+
+  .badge {
+    margin-left: $label-spacing-md;
+  }
+}
+
+.labels-connected {
+  margin: $label-spacing-md 0 $label-spacing-lg;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+
+  .label {
+    .i {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+}
+
+.label-connection {
+  height: 1px;
+  background-color: $bg-dark;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}

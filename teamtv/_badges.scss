@@ -1,0 +1,19 @@
+@import './variables';
+
+$badge-size: 22px;
+$badge-font-size: 14px;
+
+.badge {
+  display: inline-flex;
+  width: $badge-size;
+  height: $badge-size;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $bg-normal;
+  border-radius: $border-radius-default;
+  background-color: $bg-normal;
+  font-weight: normal;
+  font-size: $badge-font-size;
+  line-height: $badge-size - 2px;
+  color: $font-color-contrasting;
+}
