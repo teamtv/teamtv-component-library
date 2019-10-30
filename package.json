@@ -1,0 +1,21 @@
+{
+  "name": "component-library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:teamtv/teamtv-component-library.git",
+  "author": "Ben van de Sande <ben@pomodoro.nl>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.1"
+  },
+  "scripts": {
+    "start": "parcel index.html"
+  }
+}
