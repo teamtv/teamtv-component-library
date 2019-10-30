@@ -14073,5 +14073,89 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.btn {
+  display: inline-flex;
+  align-items: center;
+}
+.btn-primary, .btn-secondary, .btn-default {
+  border-color: transparent !important;
+}
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover, .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover, .btn-default:active, .btn-default:focus, .btn-default:hover {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+.btn-secondary, .btn-secondary:hover {
+  border-color: #28e89e !important;
+  color: #28e89e;
+  background-color: transparent !important;
+}
+.btn-link {
+  color: #424242;
+}
+.btn-link.active {
+  font-weight: bold;
+}
+.btn-block {
+  justify-content: center;
+}
+@media (max-width: 767.98px) {
+  .btn-cta {
+    width: 100%;
+    margin: 0 0 12px 0;
+    justify-content: center;
+  }
+}
+
+.btn-primary {
+  color: #fff;
+}
+
+.btn-default {
+  color: #212529;
+  background-color: #dee2e6;
+  border-color: #c8cfd6;
+}
+.btn-default:hover {
+  color: #212529;
+  background-color: #c1c9d0;
+  border-color: #edeff1;
+}
+.btn-default:focus, .btn-default.focus {
+  box-shadow: 0 0 0 0.2rem rgba(175, 182, 188, 0.5);
+}
+.btn-default.disabled, .btn-default:disabled {
+  color: #212529;
+  background-color: #dee2e6;
+  border-color: #c8cfd6;
+}
+.btn-default:not(:disabled):not(.disabled):active, .btn-default:not(:disabled):not(.disabled).active, .show > .btn-default.dropdown-toggle {
+  color: #212529;
+  background-color: #fbfcfc;
+  border-color: #8796a4;
+}
+.btn-default:not(:disabled):not(.disabled):active:focus, .btn-default:not(:disabled):not(.disabled).active:focus, .show > .btn-default.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(175, 182, 188, 0.5);
+}
+
+.btn-group-select {
+  z-index: 0;
+}
+.btn-group-select.form-control {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.btn-group-select.form-control .btn {
+  background-color: white;
+}
+.btn-group-select .btn {
+  border-color: #343a40;
+  font-weight: normal;
+  background-color: transparent;
+}
+.btn-group-select .btn.active {
+  background-color: #343a40;
+  color: white;
+}
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */

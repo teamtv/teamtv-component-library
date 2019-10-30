@@ -1,0 +1,86 @@
+@import "teamtv/variables";
+@import "~bootstrap/scss/variables";
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+
+  &-primary,
+  &-secondary,
+  &-default {
+    border-color: transparent !important;
+
+    &:active,
+    &:focus,
+    &:hover {
+      border-color: transparent !important;
+      box-shadow: none !important;
+    }
+  }
+
+  &-secondary,
+  &-secondary:hover {
+    border-color: $colors-branding-secondary !important;
+    color: $colors-branding-secondary;
+    background-color: transparent !important;
+  }
+
+  &-link {
+    color: $font-color-default;
+
+    &.active {
+      font-weight: bold;
+    }
+  }
+
+  &-block {
+    justify-content: center;
+  }
+
+  &-cta {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin: 0 0 $spacing-md 0;
+      justify-content: center;
+    }
+  }
+}
+
+.btn-primary {
+  color: $white;
+}
+
+.btn-default {
+  @include button-variant(
+    $gray-300,
+    darken($gray-300, 7.5%),
+    darken($gray-300, 10%),
+    lighten($gray-300, 5%),
+    lighten($gray-300, 10%),
+    darken($gray-300, 30%)
+  );
+}
+
+.btn-group-select {
+  z-index: 0;
+  &.form-control {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    .btn {
+      background-color: white;
+    }
+  }
+
+  .btn {
+    border-color: $gray-800;
+    font-weight: normal;
+    background-color: transparent;
+
+    &.active {
+      background-color: $gray-800;
+      color: $font-color-contrasting;
+    }
+  }
+}
