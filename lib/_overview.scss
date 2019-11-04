@@ -19,6 +19,14 @@
     @include border-radius($border-radius-default);
     font-weight: $font-weight-bold;
 
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     &-icon {
       display: inline-flex;
       flex-direction: column;

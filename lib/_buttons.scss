@@ -5,6 +5,17 @@
   display: inline-flex;
   align-items: center;
 
+  > i {
+    margin: 0 $spacing-sm;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
   &-primary,
   &-secondary,
   &-default {
