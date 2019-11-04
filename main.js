@@ -1,6 +1,5 @@
 import "bootstrap";
-import "@fortawesome/fontawesome-free/css/all.css";
-import "./main.scss"; // Import our scss file
+import "./lib/teamtv-components.scss"; // Import our scss file
 
 import jQuery from "jquery";
 
