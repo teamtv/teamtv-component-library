@@ -1,7 +1,7 @@
 {
   "name": "teamtv-component-library",
   "version": "0.1.0",
-  "main": "main.js",
+  "main": "dist/main.js",
   "repository": "git@github.com:teamtv/teamtv-component-library.git",
   "author": "Ben van de Sande <ben@pomodoro.nl>",
   "license": "MIT",
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "parcel index.html --no-cache",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --target=module --no-source-maps"
   },
   "files": [
     "teamtv/"
