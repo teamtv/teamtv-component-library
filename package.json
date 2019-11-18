@@ -1,7 +1,7 @@
 {
   "name": "teamtv-component-library",
   "version": "0.1.0",
-  "main": "dist/main.js",
+  "main": "main.js",
   "repository": "git@github.com:teamtv/teamtv-component-library.git",
   "author": "Ben van de Sande <ben@pomodoro.nl>",
   "license": "MIT",
