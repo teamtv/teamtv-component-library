@@ -21,6 +21,6 @@
     "build": "parcel build index.html --target=module --no-source-maps"
   },
   "files": [
-    "teamtv/"
+    "lib/"
   ]
 }
