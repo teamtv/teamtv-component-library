@@ -27,7 +27,8 @@
       }
     }
 
-    &-icon {
+    &-icon,
+    &-date {
       display: inline-flex;
       flex-direction: column;
       margin: (-1 * $list-group-item-padding-y) $spacing-md
@@ -44,8 +45,37 @@
       }
     }
 
-    &-actions {
+    &-date {
+      padding: 0 1rem;
+      align-self: stretch;
+      align-items: center;
+      justify-content: center;
+      background-color: $bg-dark;
+      color: white;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &-day-of-month {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 100%;
+        margin-bottom: 3px;
+      }
+
+      &-month {
+        font-size: 10px;
+        line-height: 100%;
+        text-transform: uppercase;
+      }
+    }
+
+    &-content {
       flex-grow: 1;
+      text-align: center;
+    }
+
+    &-actions {
+      flex-grow: 0;
       text-align: right;
       margin-right: (-1 * $list-group-item-padding-y);
 

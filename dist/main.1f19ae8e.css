@@ -10056,8 +10056,12 @@ ol {
   width: 48px;
   height: 48px;
 }
-.overview-item-actions {
+.overview-item-content {
   flex-grow: 1;
+  text-align: center;
+}
+.overview-item-actions {
+  flex-grow: 0;
   text-align: right;
   margin-right: -0.75rem;
 }
