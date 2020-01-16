@@ -1,8 +1,10 @@
 @import "./variables";
 @import "./layout.scss";
 
-$page-title-size: 16px;
-$page-title-line-height: $page-title-size * 1.5;
+$page-title-size: 28px;
+$page-title-margin-bottom: $spacing-xl;
+$page-title-line-height: $page-title-size;
+
 $page-padding-top: $spacing-xl;
 
 .page {
@@ -106,6 +108,7 @@ $page-padding-top: $spacing-xl;
 
     &-content {
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       margin: $page-padding-top 0;
       @include layout-container;
@@ -141,8 +144,14 @@ $page-padding-top: $spacing-xl;
   }
 
   &-title {
+    flex-basis: 100%;
+    margin-bottom: $page-title-margin-bottom;
     font-size: $page-title-size;
     font-weight: bold;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &-subtitle {
@@ -174,6 +183,15 @@ $page-padding-top: $spacing-xl;
   &-actions {
     flex-grow: 1;
     text-align: right;
+
+    @include media-breakpoint-up(md) {
+      $page-actions-height: 36px;
+
+      .page-title + & {
+        margin-top: -1 *
+          ($page-title-size + $page-title-margin-bottom + $page-actions-height);
+      }
+    }
 
     > .btn-link:last-child {
       padding-right: 0; // align with container
