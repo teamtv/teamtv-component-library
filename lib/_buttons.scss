@@ -19,21 +19,21 @@
   &-primary,
   &-secondary,
   &-default {
-    border-color: transparent !important;
+    border-color: transparent;
 
     &:active,
     &:focus,
     &:hover {
-      border-color: transparent !important;
-      box-shadow: none !important;
+      border-color: transparent;
+      box-shadow: none;
     }
   }
 
   &-secondary,
   &-secondary:hover {
-    border-color: $colors-branding-secondary !important;
+    border-color: $colors-branding-secondary;
     color: $colors-branding-secondary;
-    background-color: transparent !important;
+    background-color: transparent;
   }
 
   &-link {

@@ -1,3 +1,6 @@
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/functions";
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -5,11 +8,11 @@
 
 // Color system
 
-$blue: #007bff !default;
-$indigo: #6610f2 !default;
-$pink: #e83e8c !default;
-$yellow: #ffc107 !default;
-$cyan: #17a2b8 !default;
+$blue: #007bff;
+$indigo: #6610f2;
+$pink: #e83e8c;
+$yellow: #ffc107;
+$cyan: #17a2b8;
 
 $purple: #5650a3;
 $red: #cf0f0f;
@@ -31,7 +34,7 @@ $border-radius-sm: 7px;
 
 $input-btn-padding-y: 0.3125rem;
 
-$font-weight-bold: 700 !default;
+$font-weight-bold: 700;
 $btn-font-weight: $font-weight-bold;
 $btn-active-box-shadow: none;
 
@@ -40,42 +43,42 @@ $nav-link-disabled-color: white;
 // Modals
 
 // Padding applied to the modal body
-// $modal-inner-padding: 1rem !default;
+// $modal-inner-padding: 1rem;
 
-// $modal-dialog-margin: 0.5rem !default;
-// $modal-dialog-margin-y-sm-up: 1.75rem !default;
+// $modal-dialog-margin: 0.5rem;
+// $modal-dialog-margin-y-sm-up: 1.75rem;
 
-// $modal-title-line-height: $line-height-base !default;
+// $modal-title-line-height: $line-height-base;
 
-// $modal-content-bg: $white !default;
-// $modal-content-border-color: rgba($black, 0.2) !default;
-// $modal-content-border-width: $border-width !default;
-// $modal-content-border-radius: $border-radius-lg !default;
-// $modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba($black, 0.5) !default;
-// $modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba($black, 0.5) !default;
+// $modal-content-bg: $white;
+// $modal-content-border-color: rgba($black, 0.2);
+// $modal-content-border-width: $border-width;
+// $modal-content-border-radius: $border-radius-lg;
+// $modal-content-box-shadow-xs: 0 0.25rem 0.5rem rgba($black, 0.5);
+// $modal-content-box-shadow-sm-up: 0 0.5rem 1rem rgba($black, 0.5);
 
-// $modal-backdrop-bg: $black !default;
-// $modal-backdrop-opacity: 0.5 !default;
-// $modal-header-border-color: $gray-200 !default;
-// $modal-footer-border-color: $modal-header-border-color !default;
-// $modal-header-border-width: $modal-content-border-width !default;
-// $modal-footer-border-width: $modal-header-border-width !default;
-// $modal-header-padding-y: 1rem !default;
-// $modal-header-padding-x: 1rem !default;
-// $modal-header-padding: $modal-header-padding-y $modal-header-padding-x !default; // Keep this for backwards compatibility
+// $modal-backdrop-bg: $black;
+// $modal-backdrop-opacity: 0.5;
+// $modal-header-border-color: $gray-200;
+// $modal-footer-border-color: $modal-header-border-color;
+// $modal-header-border-width: $modal-content-border-width;
+// $modal-footer-border-width: $modal-header-border-width;
+// $modal-header-padding-y: 1rem;
+// $modal-header-padding-x: 1rem;
+// $modal-header-padding: $modal-header-padding-y $modal-header-padding-x; // Keep this for backwards compatibility
 
-// $modal-xl: 1140px !default;
-// $modal-lg: 800px !default;
-// $modal-md: 500px !default;
-// $modal-sm: 300px !default;
+// $modal-xl: 1140px;
+// $modal-lg: 800px;
+// $modal-md: 500px;
+// $modal-sm: 300px;
 
-// $modal-fade-transform: translate(0, -50px) !default;
-// $modal-show-transform: none !default;
-// $modal-transition: transform 0.3s ease-out !default;
+// $modal-fade-transform: translate(0, -50px);
+// $modal-show-transform: none;
+// $modal-transition: transform 0.3s ease-out;
 
 // Progress bars
 
-// $font-size-base: 1rem !default;
+// $font-size-base: 1rem;
 $progress-height: 36px;
 $progress-font-size: 1rem;
 $progress-bg: #d8d8d8;
@@ -86,7 +89,7 @@ $progress-bar-bg: $purple;
 $bg-lighter: #fff;
 $bg-light: darken($bg-lighter, 5%);
 $bg-normal: darken($bg-lighter, 20%);
-$gray-700: #495057 !default;
+$gray-700: #495057;
 $bg-dark: $gray-700;
 $bg-danger: #ff3232;
 $bg-success: hsl(157, 68%, 44%);
@@ -103,8 +106,8 @@ $spacing-xl: $spacing-default * 3;
 $content-margin: 5%;
 
 $font-size-base: 1rem;
-// $font-size-sm: $font-size-base * 0.875 !default;
-$font-size-sm: $font-size-base * 0.75 !default;
+// $font-size-sm: $font-size-base * 0.875;
+$font-size-sm: $font-size-base * 0.75;
 $font-color-default: hsl(0, 0%, 26%);
 $font-color-light: lighten($font-color-default, 20%);
 $font-color-lighter: lighten($font-color-default, 40%);
@@ -113,3 +116,15 @@ $vertical-align: baseline;
 
 $icon-size: 22px;
 $logo-size: 30px;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary
+  ),
+  $theme-colors
+);
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
