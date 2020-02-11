@@ -1,0 +1,14 @@
+@import "./variables";
+
+.no-content {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: $spacing-lg;
+  background-image: url(./img/no-content-bg.png);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+}
