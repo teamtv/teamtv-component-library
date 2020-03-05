@@ -2,7 +2,7 @@
 
 .no-content {
   width: 100%;
-  min-height: 400px;
+  min-height: calc(30vw + 100px);
   display: flex;
   flex-direction: column-reverse;
   padding: $spacing-lg;
