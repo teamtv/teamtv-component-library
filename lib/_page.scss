@@ -29,15 +29,32 @@ $page-padding-top: $spacing-xl;
       padding: 0;
       list-style: none;
       font-size: $font-size-sm;
+      background-color: transparent;
 
-      @include media-breakpoint-down(sm) {
-        display: none;
-      }
+      // @include media-breakpoint-down(sm) {
+      //   display: none;
+      // }
     }
 
     .breadcrumb-item {
       display: inline;
       font-weight: bold;
+
+      & + .breadcrumb-item {
+        padding-left: 0;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &:last-child {
+        .breadcrumb-item-link {
+          &:after {
+            display: none;
+          }
+        }
+      }
 
       &-link {
         font-weight: normal;
@@ -47,7 +64,7 @@ $page-padding-top: $spacing-xl;
           color: $colors-branding-secondary;
         }
 
-        &::after {
+        &:after {
           content: ">";
           margin: 0 $spacing-md;
           color: $font-color-contrasting;

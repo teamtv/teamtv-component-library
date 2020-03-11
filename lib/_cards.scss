@@ -1,7 +1,16 @@
-@import './variables';
+@import "./variables";
 
 .card {
   margin-bottom: $spacing-xl;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: $bg-light;
+  background-clip: border-box;
+  border: 1px solid transparent;
+  border-radius: $border-radius-default;
 
   .card {
     background-color: $gray-200;
