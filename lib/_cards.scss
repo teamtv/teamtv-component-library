@@ -16,6 +16,14 @@
     background-color: $gray-200;
   }
 }
+a.card {
+  &:hover {
+    text-decoration: none;
+  }
+  .card-text {
+    color: $font-color-default;
+  }
+}
 
 .card-header {
   background-color: $bg-dark;
