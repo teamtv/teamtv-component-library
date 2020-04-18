@@ -102,6 +102,7 @@ $spacing-sm: $spacing-default / 2;
 $spacing-xs: $spacing-default / 4;
 $spacing-lg: $spacing-default * 1.5;
 $spacing-xl: $spacing-default * 3;
+$spacing-xxl: $spacing-default * 4;
 
 $content-margin: 5%;
 
@@ -121,7 +122,7 @@ $theme-colors: ();
 $theme-colors: map-merge(
   (
     "primary": $primary,
-    "secondary": $secondary
+    "secondary": $secondary,
   ),
   $theme-colors
 );
