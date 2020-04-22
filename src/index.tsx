@@ -6,8 +6,9 @@ import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
 import "@fortawesome/fontawesome-free/scss/solid.scss";
 import "bootstrap";
 
-import "lib/teamtv-components.scss"; // Import our scss file
+// import "teamtv-components.scss"; // Import our scss file
 
-ReactDOM.render(<div>test</div>, document.getElementById("root"));
+// ReactDOM.render(<div>test</div>, document.getElementById("root"));
 
 (window as any).$ = jQuery;
+//

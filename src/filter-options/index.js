@@ -2,7 +2,7 @@ import React from "react";
 // import MediaQuery from 'react-responsive';
 
 // import { gotoPath } from 'modules/route';
-// import { Carousel } from 'lib/Carousel';
+// import { Carousel } from 'Carousel';
 
 /**
  *
@@ -20,7 +20,7 @@ import "./index.scss";
 //     { onClick: console.debug, title: 'Persoonlijke ontwikkeling' },
 //   ],
 export const FilterOptions = ({ filters = [] }) => {
-  filters = filters.map(filter => {
+  filters = filters.map((filter) => {
     return {
       ...filter,
       onClick: () => {
@@ -29,7 +29,7 @@ export const FilterOptions = ({ filters = [] }) => {
         } else {
           console.debug(`TODO: implement gotoPath`, filter.path);
         }
-      }
+      },
     };
   });
 
@@ -56,7 +56,7 @@ export const FilterOptions = ({ filters = [] }) => {
   );
 };
 
-const filterItems = filters => {
+const filterItems = (filters) => {
   return filters.map((filter, idx) => {
     return (
       <button
