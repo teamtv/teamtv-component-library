@@ -1,0 +1,22 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "lib/variables";
+
+/**
+ *
+ * ================ TODO ===============
+ *  MOVE THIS TO THE COMPONENT LIBRARY
+ * ================ TODO ===============
+ *
+ */
+
+.filter-options {
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    text-align: right;
+  }
+
+  .carousel-item .btn {
+    justify-content: center;
+  }
+}
