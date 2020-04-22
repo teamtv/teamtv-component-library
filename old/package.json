@@ -1,0 +1,36 @@
+{
+  "name": "teamtv-component-library",
+  "version": "0.2.0",
+  "main": "main.js",
+  "repository": "git@github.com:teamtv/teamtv-component-library.git",
+  "author": "Ben van de Sande <info@getlean.digital>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "lib": "^4.1.2",
+    "node-sass": "^4.13.1",
+    "popper.js": "^1.16.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5"
+  },
+  "resolutions": {
+    "svgo": "1.3.2"
+  },
+  "scripts": {
+    "start": "parcel index.html --no-cache",
+    "build": "parcel build index.html --target=module --no-source-maps"
+  },
+  "files": [
+    "lib/"
+  ]
+}

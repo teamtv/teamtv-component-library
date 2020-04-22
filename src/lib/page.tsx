@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FilterOptions } from "/lib/filter-options";
+import { FilterOptions } from "lib/filter-options";
 
 // import './index.scss';
 import { NavLink } from "react-router-dom";
