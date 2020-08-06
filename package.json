@@ -15,10 +15,12 @@
     "parcel-bundler": "^1.12.4",
     "sass": "^1.23.1"
   },
-  "resolutions": { "svgo": "1.3.2" },
+  "resolutions": {
+    "svgo": "1.3.2"
+  },
   "scripts": {
     "start": "parcel index.html --no-cache",
-    "build": "parcel build index.html --target=module --no-source-maps"
+    "build": "rm dist/* && parcel build index.html --target=module --no-source-maps --no-minify --no-cache --no-content-hash"
   },
   "files": [
     "lib/"
