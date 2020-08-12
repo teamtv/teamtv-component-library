@@ -23,3 +23,4 @@ yarn-error.log*
 .env.*
 yarn.lock
 .cache
+pkg/*
