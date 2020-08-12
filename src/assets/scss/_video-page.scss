@@ -1,0 +1,163 @@
+@import "~bootstrap/scss/mixins";
+@import "./layout.scss";
+@import "./variables.scss";
+
+.play-match-main {
+  @include vh100-media-up;
+
+  &.video-player-container {
+    @include media-breakpoint-down(md) {
+      margin-left: 0;
+      width: auto;
+    }
+  }
+}
+
+.video-scoreboard {
+  align-self: center;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  width: 66%;
+  min-width: 500px;
+  max-width: 650px;
+  padding: $spacing-default 0;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 100%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 22px;
+  vertical-align: middle;
+
+  // TODO: add the background image to this file instead of in the js, then
+  // remove these !important declarations.
+  @media (max-width: 767px) {
+    position: relative;
+    width: 100%;
+    background-image: none !important;
+    background-color: hsl(0, 0%, 34%) !important;
+    min-width: unset;
+    font-size: 14px;
+  }
+
+  &-team {
+    display: flex;
+
+    > * {
+      margin: 0 $spacing-sm;
+    }
+
+    &-home {
+      justify-content: flex-end;
+      margin: 0 ($spacing-default * 4) 0 ($spacing-default * 2);
+
+      @media (max-width: 640px) {
+        margin: 0 $spacing-default 0 ($spacing-default / 2);
+      }
+    }
+    &-away {
+      flex-direction: row-reverse;
+      margin: 0 ($spacing-default * 2) 0 ($spacing-default * 4);
+
+      @media (max-width: 640px) {
+        margin: 0 ($spacing-default / 2) 0 $spacing-default;
+      }
+    }
+
+    &-icon {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border-radius: 50%;
+    }
+
+    &-score {
+      flex-grow: 1;
+    }
+  }
+}
+
+#video-player-wrapper {
+  display: flex;
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: 210px;
+  position: relative;
+  background-color: #000;
+
+  /* Comment next line to make sure video player + content below player take 100vh */
+  @include media-breakpoint-down(xs) {
+    padding-top: 56.65%;
+  }
+
+  > div:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    > div.jwplayer {
+      height: 100% !important;
+      width: 100% !important;
+    }
+  }
+}
+
+.video-player-container {
+  display: flex;
+  flex-direction: column;
+  position: sticky; // MAKE IT STICKY
+  top: 0; // MAKE IT STICKY
+  z-index: 1;
+  flex-grow: 1;
+  // @include vh100-media-up;
+
+  @include media-breakpoint-down(md) {
+    margin-left: -$spacing-lg; // negate layout-with-sidebar padding
+    //margin-left: -5vw;
+    //margin-top: -18px;
+    width: 100vw;
+  }
+
+  &.in-modal {
+    height: unset;
+    #video-player-wrapper {
+      padding-top: 56.65%;
+    }
+    .video-scoreboard {
+      z-index: 1;
+    }
+  }
+
+  .video-pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    margin-top: -1px;
+    padding: $spacing-sm;
+    background-color: $bg-light;
+
+    .nav-btn {
+      background-color: $bg-dark;
+      opacity: 1 !important;
+      color: $font-color-contrasting;
+      user-select: none;
+      &.disabled {
+        pointer-events: none;
+        opacity: 0.5 !important;
+      }
+    }
+    .current {
+      width: 20%;
+      text-align: center;
+    }
+  }
+}

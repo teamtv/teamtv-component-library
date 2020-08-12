@@ -5,7 +5,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "sourceMap": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "module": "ESNext",
     "moduleResolution": "node",
     "target": "ES2020",

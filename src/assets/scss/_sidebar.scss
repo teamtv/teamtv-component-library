@@ -1,0 +1,105 @@
+@import "./variables.scss";
+@import "./layout.scss";
+
+$sidebar-width-default: 350px;
+
+.layout-with-sidebar {
+  display: flex;
+  position: relative;
+  align-items: stretch;
+  padding: $spacing-lg;
+  justify-content: center;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+    min-height: 100vh;
+    padding: 0 $spacing-lg $spacing-lg;
+  }
+
+  .main {
+    // flex-grow: 1;
+    padding: 0 $spacing-lg 0 0; // gutter on right side
+
+    @include media-breakpoint-down(md) {
+      //flex-grow: 0;
+      height: unset;
+      padding: 0 0 $spacing-lg 0; // gutter on bottom
+    }
+  }
+}
+
+.sidebar {
+  flex: 0 0 $sidebar-width-default;
+  display: flex;
+  flex-direction: column;
+
+  @include media-breakpoint-down(md) {
+    flex-grow: 1;
+    // padding: $spacing-lg 0;
+  }
+
+  &-header {
+    padding: $border-radius-default + $spacing-sm;
+    background-color: $bg-dark;
+    color: $font-color-contrasting;
+    border-radius: $border-radius-default $border-radius-default 0 0;
+  }
+
+  &-header-tabs {
+    min-height: 42px; // safari fix
+
+    .nav-link {
+      color: $font-color-light;
+
+      &.active {
+        border-bottom-color: $bg-light;
+        background-color: $bg-light;
+      }
+    }
+  }
+
+  &-list {
+    flex: 1 0 $spacing-lg;
+    width: 100%;
+    overflow-y: scroll; // MAKE IT STICKY
+
+    @include media-breakpoint-down(md) {
+      overflow-y: visible;
+    }
+    padding: $spacing-md;
+    background-color: $bg-light;
+
+    &-item {
+      width: 100%;
+      padding: $spacing-sm 0;
+      border-top: 1px solid $bg-normal;
+      font-size: $font-size-sm;
+    }
+
+    &::-webkit-scrollbar {
+      width: 16px;
+      content: "";
+    }
+
+    &::-webkit-scrollbar-track {
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+      //box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3); //, inset 0 0 1px rgba(0, 0, 0, 0.3);
+      //background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      border: 1px solid rgba(0, 0, 0, 0);
+      //outline: 5px solid slategrey;
+    }
+  }
+
+  &-footer {
+    padding: $spacing-sm;
+    background-color: $bg-light;
+    border-top: 1px solid $bg-normal;
+    border-radius: 0 0 $border-radius-default $border-radius-default;
+  }
+}
