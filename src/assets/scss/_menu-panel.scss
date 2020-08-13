@@ -1,6 +1,7 @@
-@import '~bootstrap/scss/mixins';
-@import 'lib/styles/variables.scss';
-@import 'lib/styles/badge.scss';
+@import "~bootstrap/scss/mixins";
+
+@import "./variables.scss";
+@import "./badges.scss";
 
 $bg-color: #424242;
 

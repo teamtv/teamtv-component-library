@@ -19,21 +19,23 @@
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/tables";
-// @import "@fortawesome/fontawesome-free/css/all.css";
 
-// bootstrap components
 @import "./badges";
 @import "./buttons";
 @import "./cards";
 @import "./forms";
 @import "./labels";
+@import "./layout";
+@import "./menu-panel";
 @import "./modal";
 @import "./nav";
+@import "./no_content";
+@import "./overview";
 @import "./page";
 @import "./progress";
+@import "./sidebar";
+@import "./teaser-card";
 @import "./type";
 @import "./util";
-@import "./no_content";
-
-// teamtv components
-@import "./overview";
+@import "./video-page";
+@import "./view-overlay";
