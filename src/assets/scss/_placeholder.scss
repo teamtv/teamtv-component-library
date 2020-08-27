@@ -1,0 +1,18 @@
+@import "./variables";
+
+.placeholder-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: $spacing-lg 0;
+  text-align: center;
+}
+
+.placeholder-description {
+  margin-top: $spacing-lg;
+  /* Maximum width for paragraph readability.
+     NICETOHAVE: refactor to generic paragraph component. */
+  max-width: 50em;
+}
