@@ -11,7 +11,11 @@ export {
   PlaceholderError,
   PlaceholderNoLicense,
 } from "./components/placeholder";
-export { TeaserCard } from "./components/teaser-card";
+export {
+  TeaserCard,
+  TeaserCardActions,
+  TeaserCardAction,
+} from "./components/teaser-card";
 export { ViewHeader } from "./components/view-header";
 
 export * as utils from "./utils";

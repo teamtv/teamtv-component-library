@@ -1,6 +1,8 @@
 @import "variables";
 @import "layout";
 
+$actions-toggle-width: 50px;
+
 .teaser-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -23,7 +25,7 @@
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   word-break: break-all;
-  overflow: hidden;
+  // overflow: hidden;
   cursor: pointer;
 
   @include media-breakpoint-down(sm) {
@@ -67,6 +69,7 @@
   }
 
   &-title {
+    padding-right: $actions-toggle-width;
     font-size: 1rem;
     word-break: normal;
   }
@@ -76,6 +79,27 @@
 
     i {
       margin-right: $spacing-sm;
+    }
+  }
+
+  &-actions {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+  }
+
+  &-action-toggle {
+    border-color: transparent;
+    color: transparent;
+
+    &:hover, &:active {
+    border-color: transparent;
+    }
+  }
+
+  &-action {
+    &:focus {
+      outline: none;
     }
   }
 }
